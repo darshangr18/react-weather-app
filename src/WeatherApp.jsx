@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const API_KEY = '855a36f9b1f41b472ab164aa389cad9c' // Replace with your OpenWeatherMap key
+const API_KEY = '855a36f9b1f41b472ab164aa389cad9c' 
 
 export default function WeatherApp() {
   const [city, setCity] = useState('')
@@ -13,7 +13,7 @@ export default function WeatherApp() {
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
       );
       const data = await res.json();
-      console.log('API Response:', data); // 👈 Add this
+      console.log('API Response:', data); 
       if (data.cod === 200) {
         setWeather(data);
       } else {
